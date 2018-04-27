@@ -1,0 +1,41 @@
+{
+  "dynamicData":[
+    {
+    	"seller_img1":"http://s2.mogucdn.com/mlcdn/c45406/170816_3l9859aglka8bbg12e79b177a7fii_180x180.png_200x9999.v1c7E.70.webp",
+        "seller_name":"女王陛下",
+        "focus_img1":"https://images-cn.ssl-images-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/images/favorite_empty_1-0.png",
+        "seller_title":"时尚包包，每天都有更新哦！",
+        "content_img1":"http://s3.mogucdn.com/mlcdn/c45406/170809_683b1aebc90fkhdihdgi1igeh41i2_640x631.jpg_468x468.webp",
+        "content_img2":"http://s3.mogucdn.com/mlcdn/c45406/170809_2543d66ealghc086lec83jj4deli3_640x658.jpg_468x468.webp",
+        "content_img3":"http://s3.mogucdn.com/mlcdn/c45406/170809_721l713b39c0fk9cfj38h7370hal4_640x648.jpg_468x468.webp"
+                   
+    },
+    {
+    	"seller_img1":"http://s18.mogucdn.com/mlcdn/c45406/170816_6g2lhdkd24jf114dhfa4kfc35lb69_180x180.png_200x9999.v1c7E.70.webp",
+        "seller_name":"维也纳时尚男装",
+        "focus_img1":"https://images-cn.ssl-images-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/images/favorite_empty_1-0.png",
+        "seller_title":"最新新出的男装，快进来看看吧！！!",
+        "content_img1":"http://s3.mogucdn.com/mlcdn/c45406/170626_12145f6bja9lh31h73ec0bf9hed2d_750x932.jpg_468x468.webp",
+        "content_img2":"http://s3.mogucdn.com/mlcdn/c45406/170626_14kb1h9187611kk97jk643h43flga_750x972.jpg_468x468.webp",
+        "content_img3":"http://s3.mogucdn.com/mlcdn/c45406/170725_70i306hla07jj716fl384dj2jldef_640x960.jpg_468x468.webp"
+    },
+    {
+    	"seller_img1":"http://s3.mogucdn.com/mlcdn/c45406/170727_31bhglf4ba683jb21f9gbcd7da6hl_640x960.jpg_280x360.v1cAC.70.webp",
+        "seller_name":"七叶树美鞋",
+        "focus_img1":"https://images-cn.ssl-images-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/images/favorite_empty_1-0.png",
+        "seller_title":"各位宝宝们，这是新上的款式，有兴趣的可以去看看哦！",
+        "content_img1":"http://s3.mogucdn.com/p2/170216/116201063_54j91hd9deef7ed70kcd23bbd452l_891x891.jpg_468x468.webp",
+        "content_img2":"http://s3.mogucdn.com/p2/170216/116201063_2b33bk95jbff743k445c5l4fl6587_891x891.jpg_468x468.webp",
+        "content_img3":"http://s3.mogucdn.com/p2/170216/116201063_411hj1f8g9cakkk2lijdd7d66al5f_891x891.jpg_468x468.webp"
+    },
+    {
+    	"seller_img1":"http://s3.mogucdn.com/mlcdn/c45406/170704_295ca65j3d49h451l3bjc47afjkj2_640x960.jpg_280x360.v1cAC.70.webp",
+        "seller_name":"吴家大小姐服装店",
+        "focus_img1":"https://images-cn.ssl-images-amazon.com/images/G/01/Shopbop/p/pcs/shopbop/images/favorite_empty_1-0.png",
+        "seller_title":"好多都说这款蕾丝连衣裙好看哦！收藏优惠五块哦！",
+        "content_img1":"http://s3.mogucdn.com/mlcdn/c45406/170521_642jc88kk1el7875bec7ba0kfk1l2_800x800.jpg_468x468.webp",
+        "content_img2":"http://s3.mogucdn.com/mlcdn/c45406/170521_1393863khg93c6d01cai91e0i8faj_790x787.jpg_468x468.webp",
+        "content_img3":"http://s3.mogucdn.com/mlcdn/c45406/170521_0bi2j83ld4fgj49cdcek6l12heac5_780x808.png_468x468.webp"
+    }
+   ]
+}
