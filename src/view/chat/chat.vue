@@ -12,7 +12,7 @@
     <div class="shop_content">
        <i class="fa fa-shopping-bag fa-5x" aria-hidden="true"></i><br />
        <p>购物袋还是空的哦~</p>
-       <mt-button size="normal">去逛逛</mt-button>
+       <mt-button size="normal" @click="goRe">去逛逛</mt-button>
     </div>
   	
   </div>
@@ -26,6 +26,11 @@ export default {
     return {
     	selected:""
     }
+  },
+  methods:{
+    goRe:function(){
+      this.$router.push({ path: '/login'})
+   }
   }
  
 }
@@ -34,8 +39,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .shop_head header{
-  height: 46px;
+  height: 50px;
   color: #333;
+  font-size: 16px;
   background-color: #eef1f6;
 }
 .shop_content{

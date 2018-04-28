@@ -1,20 +1,21 @@
 <template>
    <!-- 分类部分内容         -->
       <div class="sort_a">
-        <mt-navbar fixed class="page-part" v-model="selected_1">  
+        <mt-navbar fixed class="page-part" v-model="selected_1" style="height: 51px;">  
           <mt-tab-item id="1">品类</mt-tab-item>  
           <mt-tab-item id="2">品牌</mt-tab-item>  
           <mt-tab-item id="3">动态</mt-tab-item>  
         </mt-navbar>                       
 <!-- 品类 -->  
-        <mt-tab-container v-model="selected_1">  
+        <mt-tab-container v-model="selected_1">
+        <div class="pinlei">  
           <mt-tab-container-item id="1"> 
             <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
               <el-submenu index="1">
               <template slot="title"><img src="./../../assets/sort_a1.jpg" width="100%" ><h3>女上装</h3></template>
                 <el-menu-item-group>
-                  <el-menu-item index="1-1">男生 MEN</el-menu-item>
-                  <el-menu-item index="1-2">女生 WOMEN</el-menu-item>
+                  <el-menu-item index="1-1" @click="goA">女生 WOMEN</el-menu-item>
+                  <el-menu-item index="1-2" >男生 MEN</el-menu-item>
                   <el-menu-item index="1-3">生活LIFESTYLE</el-menu-item>
                 </el-menu-item-group>              
               </el-submenu>
@@ -52,7 +53,50 @@
                 </el-menu-item-group>              
               </el-submenu>
               </el-menu> 
-          </mt-tab-container-item>
+          
+
+
+<!-- 新增详细部分 -->
+      <div class="con">
+      <!-- 灰色分割线 -->
+      <hr height="20px" color=#eef1f6 SIZE=10>
+        <!-- 资讯 -->
+      <div class="news">
+        <p>猜你喜欢</p>
+        <div class="msg-tab">
+          <mt-navbar v-model="msgSelected">
+            <mt-tab-item id="recommend" style="color: #333">推荐</mt-tab-item>
+            <mt-tab-item id="health">套装</mt-tab-item>
+            <mt-tab-item id="diet">美妆</mt-tab-item>
+            <mt-tab-item id="doctor">护肤品</mt-tab-item>
+            <mt-tab-item id="old">配饰</mt-tab-item>
+          </mt-navbar>
+
+          <!-- tab-container -->
+          <mt-tab-container v-model="msgSelected">
+          <!-- 推荐 -->
+            <mt-tab-container-item id="recommend">
+              <!-- <mt-cell v-for="n in 10" :title="'content ' + n" /> -->
+              <ul class="recommendList">
+                <li v-for="item in recommendList">
+                  <hgroup>
+                    <p>{{ item.title }}</p>
+                    <span>{{ item.conut }}赞</span>
+                  </hgroup>
+                  <section>
+                    <img :src="item.image_url">
+                  </section>
+                  
+                </li>
+              </ul>
+            </mt-tab-container-item>
+
+          </mt-tab-container>
+        </div>
+      </div>
+    </div>
+    </mt-tab-container-item>
+    </div>
 
 <!-- 品牌   -->
           <mt-tab-container-item id="2">
@@ -128,6 +172,14 @@
 
 <script>
 
+// 推荐列表
+import recomImg1 from './../../assets/con1.jpg'
+import recomImg2 from './../../assets/con4.jpg'
+import recomImg3 from './../../assets/con3.jpg'
+import recomImg4 from './../../assets/con2.jpg'
+
+
+const arrayImg = ["dietImg2","dietImg3","dietImg4"];
 export default {
   name: '',
   data () {
@@ -151,8 +203,33 @@ export default {
           content_img1: "",
           content_img2: "",
           content_img3: ""
-        }]
-    }
+        }],
+        msgSelected: "recommend",
+        // 推荐列表
+        recommendList: [
+          {
+            title:"夏天快到啦！ins风印花T恤来袭哦！",
+            conut:360,
+            image_url:recomImg1
+          },
+          {
+            title:"个子矮怎样搭配出女神范呢？来一条仙气满满的雪纺连衣裙吧！",
+            conut:376,
+            image_url:recomImg2
+          },
+          {
+            title:"衬衫PK雪纺衫，百搭不挑人！",
+            conut:541,
+            image_url:recomImg3
+          },
+          {
+            title:"口红怎么涂都不好看？怎样画桃花妆眼影？",
+            conut:412,
+            image_url:recomImg4
+          }
+        ]
+
+      }
   },
   mounted:function(){  
       var vm = this;
@@ -165,6 +242,9 @@ export default {
 	}  
   },
   methods: {
+      goA:function(){
+      this.$router.push({ path: '/a_sort'})
+    },
       handleOpen(key, keyPath) {
       },
       handleClose(key, keyPath) {
@@ -202,6 +282,9 @@ export default {
   padding: 0 0;
   height: 128px;
 }
+.sort_a .mint-tab-item-label{
+  font-size: 14px;
+}
 .sort_a .el-menu-item-group .el-menu-item{
   height: 56px;
 }
@@ -220,6 +303,7 @@ export default {
   top: 23px;
   left: 31px;
   text-align: left;
+  font-size: 13px;
 }
 .sort_a span h3{
   top: 23px;
@@ -247,9 +331,12 @@ export default {
 .sort_brand .mint-tab-container-item {
   border-top: solid 1px #ddd;
 }
+.pinlei .mint-tab-container-item{
+  padding-top: 54px;
+}
 .sort_brand .mint-search {
   height:50px;
-  /*overflow: hidden;*/
+  padding-top: 12%;
   width: 100%;
 }
 .sort_brand .mint-searchbar-cancel {
@@ -315,7 +402,105 @@ export default {
   height: 28px;
   text-align: left;
   padding-left: 10px;
-  padding-top: 6px;
-  font-size: 15px;
+  padding-top: 64px;
+  font-size: 13px;
+}
+
+/*新增样式*/
+/*中间*/
+.con{
+  position: relative;
+}
+.con .swipe_bar{
+  position: relative;
+    width: 100%;
+    height: 10rem;
+    margin-bottom: .3rem;
+}
+.con .swipe_bar img{
+  width: 24rem;
+    height: 10rem;
+}
+.con ul.service_nav{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  overflow: hidden;
+  font-size: 0.5rem;
+  color: #333;
+}
+.con li{
+  float: left;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    padding: .4rem 0;
+}
+.con li img{
+  width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-bottom: .3rem;
+}
+.con .figcaption{
+  color: #5B5B5B;
+}
+/*资讯*/
+.con .news > p {
+    text-align: left;
+    margin-left: .8rem;
+    margin: .5rem auto;
+    font-size: .8rem;
+    padding: 7px;
+    padding-top: 8px;
+}
+.con .mint-navbar{
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+}
+.con .mint-navbar button{
+  background-color: #fff;
+    border-width: 0;
+    border-color: #fff;
+    outline-color: #fff;
+    color:#2894FF;
+}
+.con .msg-tab .mint-navbar > .mint-tab-item.is-selected{
+  color: #26a2ff;
+}
+/*推荐*/
+.con ul.recommendList {
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 61px;
+}
+.con ul.recommendList li{
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+}
+hgroup{
+    text-align: left;
+    width: 70%;
+}
+.con hgroup p{
+    font-size: .7rem;
+    color: #272727;
+    font-weight: 600;
+    font-family: inherit;
+    margin: 5px 0;
+}
+.con hgroup span{
+  font-size: .2rem;
+}
+.con section{
+    margin-left: 2rem;
+}
+.con section img {
+    width: 4.2rem;
+    height: 3.5rem;
 }
 </style>

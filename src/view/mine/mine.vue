@@ -37,11 +37,25 @@
     </ul> 
   </div>
 <!-- 灰色分割线 -->
-  <hr height="10px" color=#eef1f6 SIZE=10>
+  <hr height="10px" color=#eef1f6 SIZE=3>
+  <div class="my_man">
+    <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
+              <el-submenu index="1" style="margin-left:-40px;background-color: #fff;">
+              <template slot="title"><p>后台管理</p></template>
+                <el-menu-item-group>
+                  <el-menu-item index="1-1" style="width: 100%;margin-top: -16px;" 
+                    @click="gobuyer" >客户管理</el-menu-item>
+                  <el-menu-item index="1-2">员工管理</el-menu-item>
+                  <el-menu-item index="1-3">订单管理</el-menu-item>
+                </el-menu-item-group>              
+              </el-submenu>
+              </el-menu>
+  </div>
+
   <div class="my_e">
     <ul>
       <li><i class="fa fa-building-o" aria-hidden="true"></i>地址管理
-         <div class="i-right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+          <div class="i-right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
       </li>
       <li><i class="fa fa-rebel" aria-hidden="true"></i>我的会员
          <div class="i-right"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
@@ -87,21 +101,29 @@ export default {
   data () {
     return {
     }
-  }
- 
+  },
+    methods:{
+      handleOpen(key, keyPath) {
+      },
+      handleClose(key, keyPath) {
+      },
+      gobuyer:function(){
+      this.$router.push({ path: '/buyer'})
+    }
+   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .my header{
-  height: 46px;
+  height: 51px;
   color: #333;
   background-color: #eef1f6;
 }
 .my_a{
   width: 100%;
   height: 115px;
+  padding-top: 20%;
 }
 .my_a img{
   width: 60px;
@@ -157,6 +179,7 @@ export default {
 .my_d ul{
   width: 100%;
   padding:0;
+  list-style: none;
 }
 .my_d ul>li{
   width: 20%;
@@ -168,12 +191,22 @@ export default {
 .my_d ul>li i{
   font-size: 21px;
 }
+/*后台管理部分*/
+.my_man{
+  margin-top: -10px;
+}
+.my_man p{
+  margin: 0;
+  text-align: left;
+  padding-left: 37px;
+}
 .my_e{
   margin-bottom: 55px;
 }
 .my_e ul{
   width: 100%;
   padding:0;
+  margin-top: 0px;
 }
 .my_e ul>li{
   width: 100%;
@@ -192,5 +225,8 @@ export default {
 .my_e ul>li .i-right{
   float: right;
   width: 35px;
+}
+.el-submenu__title{
+  margin-left: -33px;
 }
 </style>
