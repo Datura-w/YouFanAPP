@@ -85,7 +85,7 @@ export default {
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            this.$router.push('/seek');
+            this.$router.push('/home');
           } else {
             console.log('error submit!!');
             return false;
@@ -100,7 +100,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .login header{
-  height: 46px;
+  height: 51px;
   color: #333;
   background-color: #eef1f6;
 }

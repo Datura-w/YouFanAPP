@@ -2,24 +2,24 @@
 	<div class="tab_a">
       <mt-tabbar>
         <mt-tab-item id="首页">
-         <router-link to="/seek">
+         <router-link to="/home">
           <i class="fa fa-home" aria-hidden="true"></i><br />
           <p style="margin-top: -4px;">首页</p>
           </router-link> 
         </mt-tab-item>
         <mt-tab-item id="分类">
-         <router-link to="/health">
+         <router-link to="/sort">
           <i class="fa fa-th-large" aria-hidden="true"></i><br />
           <p style="margin-top: -4px;">分类</p>
           </router-link>
         </mt-tab-item>
         <mt-tab-item id="购物袋">
-        <router-link to="/chat">
+        <router-link to="/shopcar">
            <i class="fa fa-shopping-bag" aria-hidden="true"></i><br />
           <p style="margin-top: -4px;">购物袋</p>
           </router-link> 
         </mt-tab-item>
-        <mt-tab-item id="我的">
+        <mt-tab-item id="我的" @click="goLo">
         <router-link to="/mine">
           <i class="fa fa-user" aria-hidden="true"></i><br />
           <p style="margin-top: -4px;">我的</p>
@@ -31,14 +31,18 @@
 
 <script>
 
-	export default {
-		
+export default {	
 		data(){
 			return{
 
 			}
-		}
+		},
+    methods:{
+      goLo:function(){
+        this.$router.push({ path: '/lo_mine'})
+    }
 	}
+}
 </script>
 
 <style>

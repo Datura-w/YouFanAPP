@@ -45,8 +45,8 @@
                 <el-menu-item-group>
                   <el-menu-item index="1-1" style="width: 100%;margin-top: -16px;" 
                     @click="gobuyer" >客户管理</el-menu-item>
-                  <el-menu-item index="1-2">员工管理</el-menu-item>
-                  <el-menu-item index="1-3">订单管理</el-menu-item>
+                  <el-menu-item index="1-2" @click="gomanage">员工管理</el-menu-item>
+                  <el-menu-item index="1-3" @click="godingdan">订单管理</el-menu-item>
                 </el-menu-item-group>              
               </el-submenu>
               </el-menu>
@@ -109,6 +109,12 @@ export default {
       },
       gobuyer:function(){
       this.$router.push({ path: '/buyer'})
+    },
+    gomanage:function(){
+      this.$router.push({ path: '/manage'})
+    },
+    godingdan:function(){
+      this.$router.push({ path: '/mine'})
     }
    }
 }

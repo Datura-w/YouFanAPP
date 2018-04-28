@@ -2,7 +2,7 @@
     <div class="a_head">
        <div id="a_s1">  
          <mt-header title="填写信息">  
-            <router-link to="/myself1" slot="left">  
+            <router-link to="/lo_mine" slot="left">  
                <mt-button icon="back" @click="handleClose">返回</mt-button>  
             </router-link>   
          </mt-header>           
@@ -60,6 +60,7 @@ export default {
   background-color: #eaeaea;
   color: #000;
   font-size: 15px;
+  height: 51px;
 }
 /*设置按钮*/
 .btn_re .el-button{

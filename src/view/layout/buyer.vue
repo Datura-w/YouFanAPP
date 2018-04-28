@@ -4,7 +4,7 @@
 
 <div id="a_s1">  
          <mt-header title="客户管理信息">  
-            <router-link to="/home1" slot="left">  
+            <router-link to="/mine" slot="left">  
                <mt-button icon="back" @click="handleClose">返回</mt-button>  
             </router-link>  
             <mt-button icon="more" slot="right" @click="more"></mt-button>  
@@ -197,7 +197,7 @@
          methods: {
              handleClose: function(){  
                 console.log("返回") 
-                this.$router.push({ path: '/mine'}) 
+                // this.$router.push({ path: '/mine'}) 
             },  
             more: function(){  
                 console.log("更多")  

@@ -43,7 +43,7 @@ export default {
       this.$router.push({ path: '/login'})
     },
     goRe:function(){
-      this.$router.push({ path: '/seek'})
+      this.$router.push({ path: '/register'})
     },
     handleClose: function(){  
         console.log("返回")  
@@ -61,7 +61,7 @@ export default {
   background-color: #eaeaea;
   color: #000;
   font-size: 15px;
-  height: 50px;
+  height: 51px;
 }
 .lo_mine p{
   margin: 0px;

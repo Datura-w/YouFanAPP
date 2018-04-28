@@ -191,7 +191,7 @@ export default {
 
     handleClose: function(){  
         console.log("返回") 
-        this.$router.push({ path: '/health'}) 
+        this.$router.push({ path: '/sort'}) 
     },  
     more: function(){  
         console.log("更多")  

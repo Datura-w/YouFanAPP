@@ -5,9 +5,9 @@ import Hello from '@/components/Hello'
 // import Home from './../components/index'
 
 import Index from '@/view/index/index'
-import Seek  from '@/view/seek/seek'
-import Health from '@/view/health/health'
-import Chat from '@/view/chat/chat'
+import Home  from '@/view/home/home'
+import Sort from '@/view/sort/sort'
+import Shopcar from '@/view/shop-car/shopcar'
 import Mine from '@/view/mine/mine'
 
 import Buyer from '@/view/layout/buyer'
@@ -47,20 +47,20 @@ export default new Router({
       children:[
 // 首页
         {
-          path:'/seek',
-          name:'seek',
-          component:Seek
+          path:'/home',
+          name:'home',
+          component:Home
         },
 // 分类
         {
-          path:'/health',
-          name:'health',
-          component:Health
+          path:'/sort',
+          name:'sort',
+          component:Sort
         },
         {
-          path:'/chat',
-          name:'chat',
-          component:Chat
+          path:'/shopcar',
+          name:'shopcar',
+          component:Shopcar
         },  
 // 个人主页
         {

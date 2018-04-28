@@ -22,7 +22,7 @@ export default {
   },
   methods:{
     gohome:function(){
-      this.$router.push({ path: '/seek'})
+      this.$router.push({ path: '/home'})
     }
   }
  

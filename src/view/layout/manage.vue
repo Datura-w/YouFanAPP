@@ -3,7 +3,7 @@
   <div class="cum_header">
     <div id="a_s1">  
          <mt-header title="员工管理信息">  
-            <router-link to="/home1" slot="left">  
+            <router-link to="/mine" slot="left">  
                <mt-button icon="back" @click="handleClose">返回</mt-button>  
             </router-link>  
             <mt-button icon="more" slot="right" @click="more"></mt-button>  
